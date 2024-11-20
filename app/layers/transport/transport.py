@@ -24,9 +24,11 @@ def getAllImages(input=None):
                 json_collection.append(object)
             else:
                 print("[transport.py]: se encontró un objeto sin clave 'image', omitiendo...")
+    
 
         except KeyError: 
             # puede ocurrir que no todos los objetos tenga la info. completa, en ese caso descartamos dicho objeto y seguimos con el siguiente en la próxima iteración.
             pass
+    print("[transport.py]: json_collection =", json_collection)
 
     return json_collection
