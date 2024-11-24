@@ -41,6 +41,7 @@ def saveFavourite(request):
 def deleteFavourite(request):
     pass
 
-@login_required
+@login_required #Cierra sesion y redirecciona a login
 def exit(request):
-    pass
+    logout(request)
+    return redirect('login')
